@@ -1,5 +1,6 @@
 package net.noiseinstitute.basecode.scoring {
     import net.flashpunk.Entity;
+    import net.noiseinstitute.basecode.Ease;
 
     public class DegradingMultiplier extends Entity implements IScoreModifier {
         private var _factor:Number = 1;
@@ -20,7 +21,7 @@ package net.noiseinstitute.basecode.scoring {
 
         public function DegradingMultiplier(degradeDurationFrames:Number, easing:Function=null) {
             this.degradeDurationFrames = degradeDurationFrames;
-            this.easing = easing || easeCliff;
+            this.easing = easing || Ease.cliff();
         }
 
         public function modify (points:Number):Number {
@@ -39,14 +40,6 @@ package net.noiseinstitute.basecode.scoring {
 
             var t:Number = easing((degradeDurationFrames - degradeElapsedFrames) / degradeDurationFrames);
             _factor = factorBeforeDegradation * t;
-        }
-
-        private function easeCliff(t:Number):Number {
-            if (t > 0) {
-                return 1;
-            } else {
-                return 0;
-            }
         }
     }
 }
