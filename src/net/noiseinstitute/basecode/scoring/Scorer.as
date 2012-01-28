@@ -16,7 +16,7 @@ package net.noiseinstitute.basecode.scoring {
             scorePoints(1);
         }
 
-        public function scorePoints(points:Number):void {
+        public function scorePoints(points:Number, scoreEvent:IScoreEvent=null):void {
             if (!isFinite(points)) {
                 throw new ArgumentError("points is not a finite number");
             }
@@ -26,7 +26,7 @@ package net.noiseinstitute.basecode.scoring {
             }
 
             for each (var listener:Function in scoreListeners) {
-                listener(points);
+                listener(points, scoreEvent);
             }
 
             _score += points;
