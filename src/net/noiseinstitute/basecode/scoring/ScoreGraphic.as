@@ -7,9 +7,9 @@ package net.noiseinstitute.basecode.scoring {
 
     public class ScoreGraphic extends Graphic {
         public var scorer:Scorer;
-        public var text:Text;
+        public var text:Text = new Text("");
 
-        public function ScoreGraphic (scorer:Scorer=null, text:Text=null) {
+        public function ScoreGraphic (scorer:Scorer=null) {
             this.scorer = scorer;
             this.text = text;
         }
