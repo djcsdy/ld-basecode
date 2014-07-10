@@ -895,12 +895,12 @@ package net.flashpunk.debug
 		/** @private */ private const WATCH_LIST:Vector.<String> = Vector.<String>(["x", "y"]);
 		
 		// Embedded assets.
-		[Embed(source='console_logo.png')] private const CONSOLE_LOGO:Class;
-		[Embed(source='console_debug.png')] private const CONSOLE_DEBUG:Class;
-		[Embed(source='console_output.png')] private const CONSOLE_OUTPUT:Class;
-		[Embed(source='console_play.png')] private const CONSOLE_PLAY:Class;
-		[Embed(source='console_pause.png')] private const CONSOLE_PAUSE:Class;
-		[Embed(source='console_step.png')] private const CONSOLE_STEP:Class;
+		[Embed(source = 'console_logo.png')] private const CONSOLE_LOGO:Class;
+		[Embed(source = 'console_debug.png')] private const CONSOLE_DEBUG:Class;
+		[Embed(source = 'console_output.png')] private const CONSOLE_OUTPUT:Class;
+		[Embed(source = 'console_play.png')] private const CONSOLE_PLAY:Class;
+		[Embed(source = 'console_pause.png')] private const CONSOLE_PAUSE:Class;
+		[Embed(source = 'console_step.png')] private const CONSOLE_STEP:Class;
 		
 		// Reference the Text class so we can access its embedded font
 		private static var textRef:Text;
