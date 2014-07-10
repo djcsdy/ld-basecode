@@ -15,7 +15,7 @@
   <property name="build.dir" location="build"/>
   
   <property name="lib.flextasks" location="${lib.dir}/flexTasks.jar"/>
-  <property name="lib.flashpunk.dir" location="${lib.dir}/flashpunk"/>
+  <property name="lib.flashpunk.dir" location="${lib.dir}/FlashPunk-1.7.2"/>
   
   
   <antversion property="ant.version.sufficient"
