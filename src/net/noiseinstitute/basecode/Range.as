@@ -5,9 +5,9 @@ package net.noiseinstitute.basecode {
                 n -= min;
                 max = max - min + 1;
                 if (n < 0) {
-                    n += max * Math.ceil(-n/max);
+                    n += max * Math.ceil(-n / max);
                 }
-                return min + n%max;
+                return min + n % max;
             } else {
                 return n;
             }

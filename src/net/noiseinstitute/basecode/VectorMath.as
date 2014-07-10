@@ -5,7 +5,7 @@ package net.noiseinstitute.basecode {
 
     public class VectorMath {
         public static function add(v:Point, w:Point):Point {
-            return new Point(v.x+w.x, v.y+w.y);
+            return new Point(v.x + w.x, v.y + w.y);
         }
 
         public static function addTo(v:Point, w:Point):void {
@@ -14,7 +14,7 @@ package net.noiseinstitute.basecode {
         }
 
         public static function subtract(v:Point, w:Point):Point {
-            return new Point(v.x-w.x, v.y-w.y);
+            return new Point(v.x - w.x, v.y - w.y);
         }
 
         public static function subtractFrom(v:Point, w:Point):void {
@@ -23,11 +23,11 @@ package net.noiseinstitute.basecode {
         }
 
         public static function dot(v:Point, w:Point):Number {
-            return v.x*w.x + v.y*w.y;
+            return v.x * w.x + v.y * w.y;
         }
 
         public static function cross(v:Point, w:Point):Number {
-            return v.x*w.y - v.y*w.x;
+            return v.x * w.y - v.y * w.x;
         }
 
         public static function scale(v:Point, s:Number):Point {
@@ -53,7 +53,7 @@ package net.noiseinstitute.basecode {
         }
 
         public static function magnitude(v:Point):Number {
-            return Math.sqrt(v.x*v.x + v.y*v.y);
+            return Math.sqrt(v.x * v.x + v.y * v.y);
         }
 
         public static function setMagnitudeInPlace(v:Point, mag:Number):void {
@@ -67,7 +67,7 @@ package net.noiseinstitute.basecode {
             if (m == 0) {
                 return new Point(0, 0);
             } else {
-                return new Point(v.x/m, v.y/m);
+                return new Point(v.x / m, v.y / m);
             }
         }
 
@@ -86,16 +86,16 @@ package net.noiseinstitute.basecode {
         public static function rotate(v:Point, angle:Number):Point {
             var sin:Number = Trig.sin(angle);
             var cos:Number = Trig.cos(angle);
-            return new Point(cos*v.x - sin*v.y,
-                    cos*v.y + sin*v.x);
+            return new Point(cos * v.x - sin * v.y,
+                    cos * v.y + sin * v.x);
         }
 
         public static function rotateInPlace(v:Point, angle:Number):void {
             var sin:Number = Trig.sin(angle);
             var cos:Number = Trig.cos(angle);
             var oldX:Number = v.x;
-            v.x = cos*v.x - sin*v.y;
-            v.y = cos*v.y + sin*oldX;
+            v.x = cos * v.x - sin * v.y;
+            v.y = cos * v.y + sin * oldX;
         }
 
         public static function unitVector(angle:Number):Point {
@@ -108,19 +108,19 @@ package net.noiseinstitute.basecode {
         }
 
         public static function polar(angle:Number, magnitude:Number):Point {
-            return new Point(Trig.sin(angle)*magnitude, -Trig.cos(angle)*magnitude);
+            return new Point(Trig.sin(angle) * magnitude, -Trig.cos(angle) * magnitude);
         }
 
         public static function becomePolar(v:Point, angle:Number, magnitude:Number):void {
-            v.x = Trig.sin(angle)*magnitude;
-            v.y = -Trig.cos(angle)*magnitude;
+            v.x = Trig.sin(angle) * magnitude;
+            v.y = -Trig.cos(angle) * magnitude;
         }
-        
+
         public static function set(p:Point, x:Number, y:Number):void {
             p.x = x;
             p.y = y;
         }
-        
+
         public static function copyTo(p:Point, q:Point):void {
             p.x = q.x;
             p.y = q.y;

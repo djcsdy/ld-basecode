@@ -11,7 +11,7 @@ package net.noiseinstitute.basecode {
          * @param angle The angle in negative degrees.
          * @return sin(angle) for the given angle. */
         public static function sin(angle:Number):Number {
-            return Math.sin(angle*FP.RAD);
+            return Math.sin(angle * FP.RAD);
         }
 
         /** Trigonometric cosine function operating on the same strange 'negative
@@ -20,7 +20,7 @@ package net.noiseinstitute.basecode {
          * @param angle The angle in negative degrees.
          * @return cos(angle) for the given angle. */
         public static function cos(angle:Number):Number {
-            return Math.cos(angle*FP.RAD);
+            return Math.cos(angle * FP.RAD);
         }
     }
 }

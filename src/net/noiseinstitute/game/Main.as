@@ -9,7 +9,7 @@ package net.noiseinstitute.game {
 
         public static const LOGIC_FPS:int = 60;
 
-        public function Main () {
+        public function Main() {
             super(WIDTH, HEIGHT, LOGIC_FPS, true);
 
             FP.screen.color = 0x000000;

@@ -11,7 +11,7 @@ package net.noiseinstitute.game {
     [SWF(width="640", height="480", frameRate="60", backgroundColor="000000")]
     [Frame(factoryClass="net.noiseinstitute.game.Main")]
     public class Preloader extends Sprite {
-        private static const MAIN_CLASS_NAME:String ="net.noiseinstitute.game.Main";
+        private static const MAIN_CLASS_NAME:String = "net.noiseinstitute.game.Main";
 
         private static const BACKGROUND_COLOUR:uint = 0x000000;
         private static const FOREGROUND_COLOUR:uint = 0xFFFFFF;
